@@ -1,0 +1,51 @@
+
+/* Featured article frontpage */
+article.featured {
+  height: 400px;
+  background-size: cover;
+}
+
+article.featured {
+  .inside-article {
+    padding: 30px 0;
+    .latest-podcast {
+      color: $brand-primary;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;      
+    }
+    header {
+      h2 {
+        margin-top: 30px;
+        a {
+          color: $brand-white;
+          font-size: 32px;
+          letter-spacing: 1px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Articles list frontpage */
+
+.article-list {
+  margin: 50px auto;
+  article {
+    background-color: $brand-white;
+    margin-bottom: 30px;
+    .featured-image {
+      float: left;
+      width: 300px;
+    }
+    .inside-article {
+      float: left;
+      width: 840px;
+      padding: 15px 15px 15px 25px;
+    }
+  }
+}
