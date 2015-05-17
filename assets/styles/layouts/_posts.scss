@@ -31,10 +31,45 @@ article.featured {
   }
 }
 
+article.featured {
+  position: relative;
+  .podcast-misc {
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 42px;
+    padding: 35px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    .podcast-desc {
+      float: left;
+      width: 49%;
+      h4 {
+        color: $brand-primary;
+        margin-top: 0;
+      }
+      p {
+        color: darken($brand-white, 20%);
+      }
+    }
+    .btn-holder {
+      text-align: right;
+      .podcast-btn {
+        margin-left: 20px;
+        padding: 20px;
+        color: $brand-white;
+        background: $brand-primary;
+        transition: (all, 0.3s, ease);
+        &:hover {
+          background: darken($brand-primary, 5%);
+        }
+      }
+    }
+  }
+}
+
 /* Audio player */
 
 .podcast-player {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 /* Audio overwrites */

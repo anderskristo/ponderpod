@@ -8,18 +8,19 @@
         <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       </header>
       <div class="podcast-player">
-        <?php
-        $audio = get_field('podcast_audio');
-        $url = $audio['url'];
-        $attr = array(
-        	'src'      => $url,
-        	'loop'     => '',
-        	'autoplay' => '',
-        	'preload' => 'none'
-        	);
-        echo wp_audio_shortcode( $attr );
-        ?>
-
+        <?php getPodcastAudio(); ?>
+      </div>
+    </div>
+    <div class="podcast-misc">
+      <div class="podcast-desc">
+        <h4>Detta pratar vi om:</h4>
+        <?php the_excerpt(); ?>
+      </div>
+      <div class="btn-holder">
+        <?php if (get_field('itunes_link')) : ?>
+          <a class="podcast-btn btn" href="<?php the_field('itunes_link') ?>">Prenumenera med iTunes</a>
+        <?php endif; ?>
+        <a class="podcast-btn btn" href="/podcasts/feed/">Prenumenera med RSS</a>
       </div>
     </div>
   </div>
