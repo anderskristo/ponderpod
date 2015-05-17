@@ -13,7 +13,7 @@ article.featured {
       text-transform: uppercase;
       font-size: 16px;
       font-weight: bold;
-      letter-spacing: 1px;      
+      letter-spacing: 1px;
     }
     header {
       h2 {
@@ -30,6 +30,41 @@ article.featured {
     }
   }
 }
+
+/* Audio player */
+
+.podcast-player {
+  margin-top: 100px;
+}
+
+/* Audio overwrites */
+
+.podcast-player .mejs-container {
+  &:active {
+    outline: none;
+  }
+}
+
+.podcast-player .mejs-container, .podcast-player .mejs-embed, .podcast-player .mejs-embed body, .podcast-player .mejs-container .mejs-controls {
+  background: transparent;
+}
+
+.podcast-player .mejs-controls .mejs-time-rail .mejs-time-total, .podcast-player .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  background: rgba(0, 0, 0, 0.3);
+  &:active {
+    outline: none;
+  }
+}
+
+.podcast-player .mejs-controls .mejs-time-rail .mejs-time-current,
+.podcast-player .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  background: $brand-primary;
+}
+
+.podcast-player .mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background:rgba(0, 0, 0, 0.8);
+}
+
 
 /* Articles list frontpage */
 
