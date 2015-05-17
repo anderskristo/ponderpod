@@ -6,7 +6,21 @@
       <span class="latest-podcast">Senaste podcasten</span>
       <header>
         <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      </header>      
+      </header>
+      <div class="podcast-player">
+        <?php
+        $audio = get_field('podcast_audio');
+        $url = $audio['url'];
+        $attr = array(
+        	'src'      => $url,
+        	'loop'     => '',
+        	'autoplay' => '',
+        	'preload' => 'none'
+        	);
+        echo wp_audio_shortcode( $attr );
+        ?>
+
+      </div>
     </div>
   </div>
 </article>
