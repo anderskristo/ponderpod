@@ -1,0 +1,2 @@
+* Fix bug with wp_audio_shortcode
+* Fix RSS Feed

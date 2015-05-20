@@ -35,8 +35,8 @@ article.featured {
   position: relative;
   .podcast-misc {
     background: rgba(0, 0, 0, 0.2);
-    margin-top: 42px;
     padding: 35px;
+    height: 170px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     .podcast-desc {
@@ -48,10 +48,12 @@ article.featured {
       }
       p {
         color: darken($brand-white, 20%);
+        font-size: 16px;
       }
     }
     .btn-holder {
-      text-align: right;
+      float: right;
+      margin-top: 22px;
       .podcast-btn {
         margin-left: 20px;
         padding: 20px;
