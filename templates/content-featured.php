@@ -14,6 +14,7 @@
     <div class="podcast-misc">
       <div class="podcast-desc">
         <h4>Detta pratar vi om:</h4>
+        <p><?php the_excerpt() ?></p>
       </div>
       <div class="btn-holder">
         <?php if (get_field('itunes_link')) : ?>

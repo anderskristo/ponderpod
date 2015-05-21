@@ -30,3 +30,29 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+/**
+ *
+ * Custom excerpt length
+ * @param $length
+ * @return int
+ *
+ */
+function custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/**
+ *
+ * Cutom excerpt text
+ * @param $more
+ * @return string
+ *
+ */
+function new_excerpt_more($more) {
+    global $post;
+    return '...<a class="read-more" href="'. get_permalink($post->ID) . '"> Läs mer</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
