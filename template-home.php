@@ -14,6 +14,6 @@
   query_posts( array( 'post_type' => 'podcasts', 'showposts' => 5, 'offset' => 1) ); ?>
   <div class="container article-list">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part('templates/content', 'podcasts'); ?>
+        <?php getPodcasts(); ?>
     <?php endwhile;endif; wp_reset_query() ?>
   </div>

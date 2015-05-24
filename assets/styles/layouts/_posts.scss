@@ -3,17 +3,26 @@
 article.featured {
   height: 400px;
   background-size: cover;
+  @media (max-width: $screen-md-min) {
+    height: auto;
+  }
 }
 
 article.featured {
   .inside-article {
     padding: 30px 0;
+    @media (max-width: $screen-lg-phone) {
+      text-align: center;
+    }
     .latest-podcast {
       color: $brand-primary;
       text-transform: uppercase;
       font-size: 16px;
       font-weight: bold;
       letter-spacing: 1px;
+      @media (max-width: $screen-lg-phone) {
+        display: inline-block;
+      }
     }
     header {
       h2 {
@@ -39,9 +48,15 @@ article.featured {
     height: 170px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
+    @media (max-width: $screen-md-min) {
+      height: auto;
+    }
     .podcast-desc {
       float: left;
       width: 49%;
+      @media (max-width: $screen-md-min) {
+        width: 100%;
+      }
       h4 {
         color: $brand-primary;
         margin-top: 0;
@@ -54,6 +69,10 @@ article.featured {
     .btn-holder {
       float: right;
       margin-top: 22px;
+      @media (max-width: $screen-lg-phone) {
+        float: left;
+        width: 100%;
+      }
       .podcast-btn {
         margin-left: 20px;
         padding: 20px;
@@ -62,6 +81,14 @@ article.featured {
         transition: (all, 0.3s, ease);
         &:hover {
           background: darken($brand-primary, 5%);
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        @media (max-width: $screen-lg-phone) {
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 10px;
         }
       }
     }
@@ -113,11 +140,54 @@ article.featured {
     .featured-image {
       float: left;
       width: 300px;
+      height: 200px;
+      @media (max-width: $screen-lg-phone) {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
     }
     .inside-article {
       float: left;
-      width: 840px;
       padding: 15px 15px 15px 25px;
+      width: 73%;
+      @media (max-width: $screen-lg-min) {
+        width: 68%;
+      }
+      @media (max-width: $screen-md-min) {
+        width: 58%;
+      }
+      @media (max-width: $screen-sm-min) {
+        width: 100%;
+      }
+      h2 {
+        margin-top: 0;
+        a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Archive page */
+
+.podcasts-archive {
+  article {
+    margin-bottom: 50px;
+    .featured-image {
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
     }
   }
 }
