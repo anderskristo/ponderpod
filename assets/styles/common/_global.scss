@@ -5,6 +5,12 @@ body {
   font-size: 18px;
 }
 
+.kontakt .wrap,
+.blog .wrap,
+.archive .wrap {
+  margin-top: 100px;
+}
+
 ::selection {
   background: $brand-primary;
   color: $brand-white;

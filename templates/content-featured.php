@@ -18,9 +18,9 @@
       </div>
       <div class="btn-holder clearfix">
         <?php if (get_field('itunes_link')) : ?>
-          <a class="podcast-btn btn" href="<?php the_field('itunes_link') ?>">Prenumenera med iTunes</a>
+          <a class="podcast-btn btn" href="<?php the_field('itunes_link') ?>">Prenumerera med iTunes</a>
         <?php endif; ?>
-        <a class="podcast-btn btn" href="/podcasts/feed/">Prenumenera med RSS</a>
+        <a class="podcast-btn btn" href="/podcasts/feed/">Prenumerera med RSS</a>
       </div>
     </div>
   </div>

@@ -21,10 +21,22 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+          /**
+           *
+           * Do headroom.js
+           *
+           */
+
+          // grab an element
+          var headerElement = document.getElementById('header');
+          var headroom = new Headroom(headerElement, {
+              "offset": 50,
+              "tolerance": 5
+          });
+          headroom.init();
       },
       finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
+
       }
     },
     // Home page

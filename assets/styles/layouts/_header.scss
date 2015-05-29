@@ -1,6 +1,10 @@
 /* Header */
 
 header.banner {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999999;
   height: 100px;
   background-color: $brand-grey;
   a.logo {
@@ -8,11 +12,23 @@ header.banner {
     display: block;
     color: darken($brand-white, 20%);
     font-size: 2.5em;
-    margin-top: 22px;
+    margin-top: 17px;
     &:hover {
       text-decoration: none;            
     }
   }
+}
+
+/* Headroom */
+
+.headroom {
+  transition: transform 300ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
 }
 
 
@@ -38,7 +54,7 @@ header.banner {
         border-bottom: 2px solid $brand-primary;
       }
       a {
-        color: darken($brand-white, 20%);
+        color: darken($brand-white, 0%);
         font-size: 18px;
         &:hover {
           text-decoration: none;
