@@ -56,3 +56,13 @@ function new_excerpt_more($more) {
     return '...<a class="read-more" href="'. get_permalink($post->ID) . '"> Läs mer</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+/**
+ * Shortcodes
+ */
+
+function podcast_shortcode( $atts, $content = null ) {
+    return '<a class="hidden">' . $content . '</a>';
+}
+add_shortcode( 'podcast', 'podcast_shortcode' );

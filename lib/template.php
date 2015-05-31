@@ -25,11 +25,13 @@
 function getPodcasts () { ?>
     <article <?php post_class('clearfix'); ?>>
     <div class="featured-image">
-        <?php if (has_post_thumbnail()) {
-            the_post_thumbnail(array(300, 300));
-        } else {
-            // Default image here
-        } ?>
+        <a href="<?php the_permalink(); ?>">
+            <?php if (has_post_thumbnail()) {
+                the_post_thumbnail(array(300, 300));
+            } else {
+                // Default image here
+            } ?>
+        </a>
     </div>
     <div class="inside-article">
         <header>
