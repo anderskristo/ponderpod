@@ -25,6 +25,7 @@
     <article class="single-post single-podcast">
 
       <?php the_content(); ?>
+      <a class="hidden" href="<?php echo get_field('podcast_audio'); ?>"></a>
 
       <div class="disqus-comments">
           <div id="disqus_thread"></div>
